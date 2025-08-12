@@ -1,0 +1,7 @@
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\bin\Debug\School_Level_Problems.exe.config
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\bin\Debug\School_Level_Problems.exe
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\bin\Debug\School_Level_Problems.pdb
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\obj\Debug\School_Level_Problems.csproj.AssemblyReference.cache
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\obj\Debug\School_Level_Problems.csproj.CoreCompileInputs.cache
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\obj\Debug\School_Level_Problems.exe
+E:\Amit_Study\DSA_Using_C_Sharp\School_Level_Problems\obj\Debug\School_Level_Problems.pdb
