@@ -13,14 +13,16 @@ namespace School_Level_Problems
         {
             int[] arr = new int[]
             {
-                1, 2, 3, 4, 100
+                6, 2, 3, 4 ,5,6,7,28
             };
             for (int i = 0;i< arr.Length; i++)
             {
-                MathsProblem.Length_Of_Number(arr[i]);
+                //MathsProblem.Check_Odd_Even(arr[i]);
                 //Console.WriteLine($"Factorial Of Number : {arr[i]} is {MathsProblem.fact_Recursion(arr[i])} ");
             }
-            
+
+            //MathsProblem.Swap_Two_Number(10, 20);
+            MathsProblem.Greatest_Three_Num();
         }
     }
 }

@@ -359,8 +359,129 @@ namespace School_Level_Problems.Maths
             }
 
             Console.WriteLine($"Length of {Num} is {Count}");
-        } 
+        }
 
         #endregion Problem 11 : Count Digits In Number
+
+        #region Problem 12 : Nth Fibonacci Number
+        // 0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 ..... So On
+        // Sum Of Previour Two Number
+        public static void Fibnacci_Number(int NthFinNum)
+        {
+            int Num1 = 0;
+            int Num2 = 1;
+
+            var Result = Recusive_FibFormula(Num1, Num2, NthFinNum ,1);
+            Console.WriteLine("Fibnacci Number is : " + Result);
+        }
+
+        private static BigInteger Recusive_FibFormula(BigInteger Num1 ,BigInteger Num2 ,int NthPosition , int CurrentPosition)
+        {
+            if (CurrentPosition == NthPosition)
+            {
+                return Num1; // Return the Fibonacci number at this position
+            }
+            return Recusive_FibFormula(Num2 , (Num1 + Num2) ,NthPosition ,CurrentPosition+1);
+        }
+
+        #endregion Problem 12 : Nth Fibonacci number
+
+        #region Problem 13 : Find The Perfect Number 
+        // An Number is perfect if, the sum of all the factor is Equal to number itself
+        // 6 => 1 + 2 + 3
+        public static void Find_Perfect_Number(int GivenNumber)
+        {
+            int Sum = 0;
+            int OriginalNumber = GivenNumber;
+            for(int i = 1; i < Math.Sqrt(GivenNumber); i++)
+            {
+                if(GivenNumber % i == 0)
+                {
+                    Sum += i; 
+                    if((i != 1) && (i != GivenNumber / i)) 
+                    {
+                        Sum += GivenNumber / i;
+                    }
+                }
+            }
+            if(OriginalNumber != Sum)
+            {
+                Console.WriteLine($"Given Number {OriginalNumber} is not Perfect ");
+            }
+            else
+            {
+                Console.WriteLine($"Given Number {OriginalNumber} is Perfect ");
+            }
+
+        }
+
+        #endregion Problem 13 : Find The Perfect Number 
+
+        #region Problem 14 : Sum of first N natural numbers
+
+        // Formula : n(n+1) / 2
+        public static void Sum_of_NatualNumbers(int GivenNumber)
+        {
+            Console.WriteLine($"Sum OF N Natural Number {GivenNumber} are : {(GivenNumber * (GivenNumber + 1)) / 2}");
+        }
+
+        #endregion Problem 14 : Sum of first N natural numbers
+
+        #region Problem 15 : Sum of Square of first N Natural Number
+
+        //n(n+1)(2n+1) / 6
+        public static void Sum_of_Square_OF_NatualNumbers(int GivenNumber)
+        {
+            Console.WriteLine($"Sum OF Square of N Natural Number {GivenNumber} are : {(GivenNumber * (GivenNumber + 1) * (2 * GivenNumber + 1)) / 6}");
+        }
+
+        #endregion Problem 15 : Sum of Square of first N Natural Number
+
+        #region Problem 16 : Check if the Number is Odd Or Even
+
+        public static void Check_Odd_Even(int GivenNumber)
+        {
+            if(GivenNumber % 2 == 0)
+            {
+                Console.WriteLine($"Given Number {GivenNumber} is Even");
+            }
+            else
+            {
+                Console.WriteLine($"Given Number {GivenNumber} is Odd");
+
+            }
+        }
+
+        #endregion Problem 16 : Check if the Number is Odd Or Even
+
+        #region Problem 17 : Swap two numbers without third variable
+
+        public static void Swap_Two_Number(int num1 ,int num2)
+        {
+            Console.WriteLine($"Initial Num 1 {num1} && Num 2 {num2}");
+
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            num1 = num1 - num2;
+            Console.WriteLine($"SWAP Num 1 {num1} && Num 2 {num2}");
+        }
+
+        #endregion Problem 17 : Swap two numbers without third variable
+
+        #region Problem 18 : Greatest Of Three Number
+
+        public static void Greatest_Three_Num()
+        {
+            int a = 10;
+            int b = 1;
+            int c = 20;
+
+            int Greatest = (a > b ? (a > c ? a : c) : (b > c ? b : c));
+
+            Console.WriteLine($"Greatest Of Three Number {a} , {b} , {c} : {Greatest}");
+        }
+
+        #endregion Problem 18 : Greatest Of Three Number
+
     }
 }
