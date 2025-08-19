@@ -9,6 +9,8 @@ namespace School_Level_Problems.Maths
 {
     static class MathsProblem
     {
+        #region Basics 
+
         #region Problem 1 : Check if a number is prime
 
         // Prime Number are which divides with itself. 
@@ -482,6 +484,8 @@ namespace School_Level_Problems.Maths
         }
 
         #endregion Problem 18 : Greatest Of Three Number
+
+        #endregion
 
     }
 }

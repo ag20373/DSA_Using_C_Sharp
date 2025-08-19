@@ -44,12 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="School_Level_Problems\Array_Problems.cs" />
+    <Compile Include="School_Level_Problems\Generic_NonGeneric.cs" />
+    <Compile Include="School_Level_Problems\Loops_Patterns_Problem.cs" />
     <Compile Include="School_Level_Problems\Maths_Problems.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School_Level_Problems\String_Problems.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Interview_Questions.md" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

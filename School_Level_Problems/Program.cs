@@ -1,4 +1,5 @@
 ﻿using School_Level_Problems.Maths;
+using School_Level_Problems.School_Level_Problems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace School_Level_Problems
 {
     class Program
     {
+        public static object String_Problem { get; private set; }
+
         static void Main(string[] args)
         {
             int[] arr = new int[]
@@ -22,7 +25,13 @@ namespace School_Level_Problems
             }
 
             //MathsProblem.Swap_Two_Number(10, 20);
-            MathsProblem.Greatest_Three_Num();
+            //MathsProblem.Greatest_Three_Num();
+
+            //String_Problems.Non_Repeating_Number_Recursion();
+            //String_Problems.Reverse_Using_ForLoop_Manual_Swap();
+
+            //Loops_Patterns_Problem.Reverse_Number();
+            Array_Problems.Second_Smallest();
         }
     }
 }
