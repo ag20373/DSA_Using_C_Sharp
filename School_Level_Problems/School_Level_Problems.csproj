@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSA_GPT\1_Arrays\1_School_Level_Problems.cs" />
     <Compile Include="School_Level_Problems\Array_Problems.cs" />
     <Compile Include="School_Level_Problems\Generic_NonGeneric.cs" />
     <Compile Include="School_Level_Problems\Loops_Patterns_Problem.cs" />
@@ -54,8 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Interview_Questions.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DSA_TUF\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
