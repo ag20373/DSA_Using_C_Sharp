@@ -15,9 +15,9 @@ namespace School_Level_Problems
         {
             int[] arr = new int[]
             {
-                2,5,7,8,10
+              10,20,30,40,50
             };
-            ArrayScLevel.Count_Even_Odd_Recurssion(arr);
+            ArrayScLevel.Sum_Even_Indices(arr);
         }
     }
 }
