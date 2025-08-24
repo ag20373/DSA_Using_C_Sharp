@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DSA_GPT\1_Arrays\1_School_Level_Problems.cs" />
+    <Compile Include="DSA_GPT\1_Arrays\2_Easy_Level_Problem.cs" />
     <Compile Include="School_Level_Problems\Array_Problems.cs" />
     <Compile Include="School_Level_Problems\Generic_NonGeneric.cs" />
     <Compile Include="School_Level_Problems\Loops_Patterns_Problem.cs" />

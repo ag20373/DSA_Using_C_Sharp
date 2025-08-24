@@ -15,9 +15,17 @@ namespace School_Level_Problems
         {
             int[] arr = new int[]
             {
-              10,20,30,40,50
+             //10 ,9 ,8,7,6,5,4,3,2,1
+             //10 ,9 ,8,7,6,5,4,3,2   
+             //1,1,2,3,3,5,6,7,8,9,10,10
+                //1,2,3,4
+                //1,2
+                5,7,7,8,8,6,6,9,8,10,10
+                //1,1,5,7,8,9,10
             };
-            ArrayScLevel.Sum_Even_Indices(arr);
+            ArryEasyLvlProb.FindDuplicates_BruteForce(arr);
+            
+            //ArryEasyLvlProb.Reverse_Array_Optimal_Solution(arr);
         }
     }
 }

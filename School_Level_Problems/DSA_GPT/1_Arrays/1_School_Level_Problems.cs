@@ -34,7 +34,7 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Print_Array(int[] arr)
         {
             Console.Write("Elements In Array Are : ");
-            foreach(var item in arr)
+            foreach (var item in arr)
             {
                 Console.Write($"{item} , ");
             }
@@ -50,11 +50,11 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Console.Write("Elements In Array Are : ");
 
-            Print_Array_Recusive_Logic(arr ,0);
+            Print_Array_Recusive_Logic(arr, 0);
         }
-        public static void Print_Array_Recusive_Logic(int[] arr , int index)
+        public static void Print_Array_Recusive_Logic(int[] arr, int index)
         {
-            if(arr.Length == index)
+            if (arr.Length == index)
             {
                 return;
             }
@@ -97,9 +97,9 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
 
             Console.WriteLine();
         }
-        public static void Print_Array_Reverse_Recusive_Logic(int[] arr , int index) 
+        public static void Print_Array_Reverse_Recusive_Logic(int[] arr, int index)
         {
-            if(index < 0)
+            if (index < 0)
             {
                 return;
             }
@@ -120,11 +120,11 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Find_Array_Sum(int[] arr)
         {
             Print_Array(arr);
-            
+
             // Will Get Total Sum of all Elements
             int Sum = 0;
 
-            foreach(var item in arr)
+            foreach (var item in arr)
             {
                 Sum += item;
             }
@@ -140,19 +140,19 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Print_Array(arr);
 
-            int Sum = Find_Array_Sum_Recusion_Logic(arr, 0 ,0);
+            int Sum = Find_Array_Sum_Recusion_Logic(arr, 0, 0);
 
             Console.WriteLine($"Sum Is : {Sum}");
         }
-        public static int Find_Array_Sum_Recusion_Logic(int[] arr , int index ,int Sum)
+        public static int Find_Array_Sum_Recusion_Logic(int[] arr, int index, int Sum)
         {
-            if(arr.Length == index)
+            if (arr.Length == index)
             {
                 return Sum;
             }
 
             Sum += arr[index];
-            return Find_Array_Sum_Recusion_Logic(arr, index+1, Sum);
+            return Find_Array_Sum_Recusion_Logic(arr, index + 1, Sum);
         }
 
         #endregion Problem 3 : Find sum of all elements
@@ -177,7 +177,7 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
                 Sum += item;
             }
 
-            Console.WriteLine($"Avg Is : {Sum/arr.Length}");
+            Console.WriteLine($"Avg Is : {Sum / arr.Length}");
         }
 
         /* Recursive 
@@ -190,7 +190,7 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
 
             int Sum = Find_Array_Avg_Recusion_Logic(arr, 0, 0);
 
-            Console.WriteLine($"Sum Is : {Sum/arr.Length}");
+            Console.WriteLine($"Sum Is : {Sum / arr.Length}");
         }
         public static int Find_Array_Avg_Recusion_Logic(int[] arr, int index, int Sum)
         {
@@ -217,9 +217,9 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Print_Array(arr);
 
-            (int Even,int Odd) = (0,0);
+            (int Even, int Odd) = (0, 0);
 
-            foreach(var item in arr)
+            foreach (var item in arr)
             {
                 if (item % 2 == 0)
                 {
@@ -246,14 +246,14 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
 
             Console.WriteLine($"Even : {Even} , Odd : {ODD}");
         }
-        private static (int Even, int ODD) Count_Even_Odd_Recurssion_logic(int[] arr ,int index ,int Even ,int Odd)
+        private static (int Even, int ODD) Count_Even_Odd_Recurssion_logic(int[] arr, int index, int Even, int Odd)
         {
-            if(arr.Length == index)
+            if (arr.Length == index)
             {
                 return (Even, Odd);
             }
 
-            if(arr[index]% 2 == 0)
+            if (arr[index] % 2 == 0)
             {
                 Even++;
             }
@@ -282,10 +282,10 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
             int Positive = 0;
             int Negative = 0;
 
-            foreach(var item in arr)
+            foreach (var item in arr)
             {
                 if (item < 0) Negative++;
-                else Positive ++;
+                else Positive++;
             }
 
             Console.WriteLine($"Positive : {Positive} , Negative : {Negative}");
@@ -298,12 +298,12 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Count_Prositive_Negative_Recusive(int[] arr)
         {
             Print_Array(arr);
-            (int Positive, int Negative) = Count_Prositive_Negative_Recusive_Logic(arr ,0 , 0,0);
+            (int Positive, int Negative) = Count_Prositive_Negative_Recusive_Logic(arr, 0, 0, 0);
             Console.WriteLine($"Positive : {Positive} , Negative : {Negative}");
         }
         private static (int Positive, int Negative) Count_Prositive_Negative_Recusive_Logic(int[] arr, int Index, int Pos, int Nev)
         {
-            if(arr.Length == Index)
+            if (arr.Length == Index)
             {
                 return (Pos, Nev);
             }
@@ -311,12 +311,12 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
             if (arr[Index] > 0) Pos++;
             else Nev++;
 
-            return Count_Prositive_Negative_Recusive_Logic(arr, Index+1, Pos, Nev);
+            return Count_Prositive_Negative_Recusive_Logic(arr, Index + 1, Pos, Nev);
         }
 
         #endregion Problem 6 : Count positive and negative numbers
 
-        #region Problem 7 , 8 ,9 , 10 : Find Largest , Second Largest , Smallest , Second Smallest
+        #region Problem 7 , 8 , 9 , 10 : Find Largest , Second Largest , Smallest , Second Smallest
 
         // [10,25,3,45,7]	Largest 45 SecondLargest 25 Smallest 3 SecnodnSmallest 7 
 
@@ -334,26 +334,26 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
             int Smallest = arr.Max();
             int SecondSmallest = arr.Max();
 
-            for(int i= 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 // Largest and Second Largest
-                if(arr[i] > Largest)
+                if (arr[i] > Largest)
                 {
                     SecondLargest = Largest;
                     Largest = arr[i];
                 }
-                else if(arr[i] > SecondLargest && arr[i] < Largest)
+                else if (arr[i] > SecondLargest && arr[i] < Largest)
                 {
                     SecondLargest = arr[i];
                 }
 
                 // Smallest and Second Smallest
-                if(arr[i] < Smallest)
+                if (arr[i] < Smallest)
                 {
                     SecondSmallest = Smallest;
                     Smallest = arr[i];
                 }
-                else if(arr[i] < SecondSmallest && arr[i] > Smallest)
+                else if (arr[i] < SecondSmallest && arr[i] > Smallest)
                 {
                     SecondSmallest = arr[i];
                 }
@@ -376,7 +376,7 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static (int Largest, int SecondLargest, int Smallest, int SecondSmallest) Find_Element_Max_Min_Recusion_Logic(int[] arr, int i, int Largest, int SecondLargest, int Smallest, int SecondSmallest)
         {
-            if(arr.Length == i)
+            if (arr.Length == i)
             {
                 return (Largest, SecondLargest, Smallest, SecondSmallest);
             }
@@ -406,7 +406,7 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
             return Find_Element_Max_Min_Recusion_Logic(arr, i + 1, Largest, SecondLargest, Smallest, SecondSmallest);
         }
 
-        #endregion Problem 7 , 8 ,9 , 10 : Find Largest , Second Largest , Smallest , Second Smallest
+        #endregion Problem 7 , 8 , 9 , 10 : Find Largest , Second Largest , Smallest , Second Smallest
 
         #region Problem 11 : Linear Serach
 
@@ -421,9 +421,9 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
             Print_Array(arr);
             int Find = 30;
 
-            for(int item =0;item < arr.Length; item++)
+            for (int item = 0; item < arr.Length; item++)
             {
-                if(arr[item] == Find)
+                if (arr[item] == Find)
                 {
                     Console.WriteLine($"Elements {Find} Present at Index : {item}");
                     break;
@@ -444,12 +444,12 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static int Linear_Search_Recussion_Logic(int[] arr, int index, int find)
         {
-            if(arr.Length == index)
+            if (arr.Length == index)
             {
                 return -1;
             }
 
-            if(arr[index] == find)
+            if (arr[index] == find)
             {
                 return index;
             }
@@ -470,9 +470,9 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Print_Array(arr);
             int Key = 5;
-            for(int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if(arr[i] == Key)
+                if (arr[i] == Key)
                 {
                     Console.WriteLine($"First Occurrence Of {Key} is At index {i} ");
                     break;
@@ -493,15 +493,15 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static int Find_First_Occurrence_Recursion_Logic(int[] arr, int key, int index)
         {
-            if(arr.Length == index)
+            if (arr.Length == index)
             {
                 return -1;
             }
-            if(arr[index] == key)
+            if (arr[index] == key)
             {
                 return index;
             }
-            return Find_First_Occurrence_Recursion_Logic(arr ,key ,index+1);
+            return Find_First_Occurrence_Recursion_Logic(arr, key, index + 1);
         }
         #endregion Problem 12 : Find index of first occurrence of element
 
@@ -516,16 +516,16 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Print_Array(arr);
             int Key = 5;
-            for(int i = arr.Length-1; i >= 0; i--)
+            for (int i = arr.Length - 1; i >= 0; i--)
             {
-                if(Key == arr[i])
+                if (Key == arr[i])
                 {
                     Console.WriteLine($"Last Occurrence of {Key} is Present at index : {i}");
                     break;
                 }
             }
 
-            
+
         }
 
         /* Recursion 
@@ -540,16 +540,16 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static int Find_Last_Occurrence_Recursion_Logic(int[] arr, int key, int index)
         {
-            if(index < 0)
+            if (index < 0)
             {
                 return -1;
             }
-            if(arr[index] == key)
+            if (arr[index] == key)
             {
                 return index;
             }
 
-            return Find_Last_Occurrence_Recursion_Logic(arr,key ,index-1);
+            return Find_Last_Occurrence_Recursion_Logic(arr, key, index - 1);
         }
         #endregion Problem 13 : Find index of last occurrence of element
 
@@ -566,9 +566,9 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
 
             int Key = 1;
             int count = 0;
-            for(int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if(arr[i] == Key)
+                if (arr[i] == Key)
                 {
                     count++;
                 }
@@ -588,16 +588,16 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static int Count_Frequency_Recursion_Logic(int[] arr, int key, int index, int count)
         {
-            if(arr.Length == index)
+            if (arr.Length == index)
             {
                 return count;
             }
 
-            if(arr[index] == key)
+            if (arr[index] == key)
             {
                 count++;
             }
-            return Count_Frequency_Recursion_Logic(arr,key,index+1 ,count);
+            return Count_Frequency_Recursion_Logic(arr, key, index + 1, count);
         }
         #endregion Problem 14 : Count frequency of a given element
 
@@ -1031,8 +1031,13 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static int Sum_Even_Indices_Recursion_Logic(int[] arr, int index, int sum)
         {
-            // TODO: Implement recursive logic
-            return sum;
+            if(arr.Length <= index)
+            {
+                return sum;
+            }
+
+            sum += arr[index];
+            return Sum_Even_Indices_Recursion_Logic(arr, index +2 ,sum);
         }
         #endregion
 
@@ -1043,7 +1048,12 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Sum_Odd_Indices(int[] arr)
         {
             Print_Array(arr);
-            // TODO: Implement logic
+            int sum = 0;
+            for (int i = 1; i < arr.Length-1; i += 2)
+            {
+                sum += arr[i];
+            }
+            Console.WriteLine($"sum of elements at Odd indices : {sum}");
         }
 
         /* Recursion */
@@ -1055,8 +1065,14 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static int Sum_Odd_Indices_Recursion_Logic(int[] arr, int index, int sum)
         {
-            // TODO: Implement recursive logic
-            return sum;
+            if(arr.Length <= index)
+            {
+                return sum;
+            }
+
+            sum += arr[index];
+
+            return Sum_Odd_Indices_Recursion_Logic(arr,index+2,sum);
         }
         #endregion
 
@@ -1067,7 +1083,16 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Diff_Max_Min(int[] arr)
         {
             Print_Array(arr);
-            // TODO: Implement logic
+            int max = int.MinValue;
+            int min = int.MaxValue;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max < arr[i]) max = arr[i];
+                if (min > arr[i]) min = arr[i];
+            }
+
+            Console.WriteLine($"Difference in Both are : {max - min}");
         }
 
         /* Recursion */
@@ -1079,8 +1104,13 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static (int max, int min) Diff_Max_Min_Recursion_Logic(int[] arr, int index, int max, int min)
         {
-            // TODO: Implement recursive logic
-            return (max, min);
+            if (index == arr.Length)
+                return (max, min);
+
+            if (arr[index] > max) max = arr[index];
+            if (arr[index] < min) min = arr[index];
+
+            return Diff_Max_Min_Recursion_Logic(arr, index + 1, max, min);
         }
         #endregion
 
@@ -1091,7 +1121,20 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Print_Unique(int[] arr)
         {
             Print_Array(arr);
-            // TODO: Implement logic
+            for (int i = 0; i < arr.Length; i++)
+            {
+                bool isUnique = true;
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (i != j && arr[i] == arr[j])
+                    {
+                        isUnique = false;
+                        break;
+                    }
+                }
+                if (isUnique) Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
         }
 
         /* Recursion */
@@ -1099,10 +1142,24 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Print_Array(arr);
             Print_Unique_Recursion_Logic(arr, 0);
+            Console.WriteLine();
         }
         private static void Print_Unique_Recursion_Logic(int[] arr, int index)
         {
-            // TODO: Implement recursive logic
+            if (index == arr.Length) return;
+
+            bool isUnique = true;
+            for (int j = 0; j < arr.Length; j++)
+            {
+                if (index != j && arr[index] == arr[j])
+                {
+                    isUnique = false;
+                    break;
+                }
+            }
+
+            if (isUnique) Console.Write(arr[index] + " ");
+            Print_Unique_Recursion_Logic(arr, index + 1);
         }
         #endregion
 
@@ -1114,7 +1171,17 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         {
             Print_Array(arr1);
             Print_Array(arr2);
-            // TODO: Implement logic
+
+            int[] merged = new int[arr1.Length + arr2.Length];
+            int k = 0;
+
+            for (int i = 0; i < arr1.Length; i++)
+                merged[k++] = arr1[i];
+
+            for (int j = 0; j < arr2.Length; j++)
+                merged[k++] = arr2[j];
+
+            Print_Array(merged);
         }
 
         /* Recursion */
@@ -1128,7 +1195,20 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static void Merge_Arrays_Recursion_Logic(int[] arr1, int[] arr2, int[] merged, int i, int j, int k)
         {
-            // TODO: Implement recursive merge logic
+            if (i < arr1.Length)
+            {
+                merged[k] = arr1[i];
+                Merge_Arrays_Recursion_Logic(arr1, arr2, merged, i + 1, j, k + 1);
+            }
+            else if (j < arr2.Length)
+            {
+                merged[k] = arr2[j];
+                Merge_Arrays_Recursion_Logic(arr1, arr2, merged, i, j + 1, k + 1);
+            }
+            else
+            {
+                Print_Array(merged);
+            }
         }
         #endregion
 
@@ -1139,7 +1219,18 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         public static void Check_Palindrome(int[] arr)
         {
             Print_Array(arr);
-            // TODO: Implement logic
+            bool isPal = true;
+
+            for (int i = 0, j = arr.Length - 1; i < j; i++, j--)
+            {
+                if (arr[i] != arr[j])
+                {
+                    isPal = false;
+                    break;
+                }
+            }
+
+            Console.WriteLine(isPal ? "Yes (Palindrome)" : "No (Not Palindrome)");
         }
 
         /* Recursion */
@@ -1151,11 +1242,11 @@ namespace School_Level_Problems.DSA_GPT._1_Arrays
         }
         private static bool Check_Palindrome_Recursion_Logic(int[] arr, int left, int right)
         {
-            // TODO: Implement recursive logic
-            return true;
+            if (left >= right) return true;
+            if (arr[left] != arr[right]) return false;
+            return Check_Palindrome_Recursion_Logic(arr, left + 1, right - 1);
         }
         #endregion
-
 
         #endregion Array School Level Problem
 
